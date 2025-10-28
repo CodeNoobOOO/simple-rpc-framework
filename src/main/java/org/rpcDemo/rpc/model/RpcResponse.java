@@ -49,6 +49,10 @@ public class RpcResponse implements Serializable {
         this.error = error;
     }
 
+    public boolean isError(){
+        return error!=null;
+    }
+
     @Override
     public String toString() {
         return "RpcResponse{" +
