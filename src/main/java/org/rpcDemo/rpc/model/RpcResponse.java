@@ -8,6 +8,7 @@ public class RpcResponse implements Serializable {
     private String requestId;
     private Object result;
     private Throwable error;
+    private String resultType;
 
     public RpcResponse() {}
 
@@ -47,6 +48,14 @@ public class RpcResponse implements Serializable {
 
     public void setError(Throwable error) {
         this.error = error;
+    }
+
+    public String getResultType() {
+        return resultType;
+    }
+
+    public void setResultType(String resultType) {
+        this.resultType = resultType;
     }
 
     public boolean isError(){
